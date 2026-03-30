@@ -1,0 +1,108 @@
+% ===========================================================================
+% FOLHA DE PONTO GERADA AUTOMATICAMENTE
+% Mês: ABRIL/2026
+% Gerado por: gerar_folha_latex.py
+% ===========================================================================
+
+\documentclass[a4paper, 11pt]{article}
+
+% --- PACOTES ---
+\usepackage[utf8]{inputenc}      % Suporte a acentos (UTF-8)
+\usepackage[T1]{fontenc}         % Codificação de fontes para PT-BR
+\usepackage[top=1.2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}  % Margens
+\usepackage{array}               % Formatação avançada de tabelas
+\usepackage{makecell}            % Quebra de linha em células
+\usepackage{xcolor}              % Cores (para os XXXX cinza)
+\usepackage{graphicx}
+\usepackage{grffile}
+
+% --- CONFIGURAÇÕES ---
+\pagestyle{empty}                % Sem número de página
+\setlength{\parindent}{0pt}    % Sem recuo de parágrafo
+\setlength{\parskip}{3pt}      % Espaço entre parágrafos
+
+% --- COMANDOS PERSONALIZADOS ---
+\newcommand{\semexpediente}{\textcolor{gray}{**********************************}}
+\newcommand{\assinatura}{\textit{NOME}}
+
+\begin{document}
+
+% === CABEÇALHO INSTITUCIONAL ===
+\begin{center}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.15\textwidth]{logo_ssp_pb.png}
+    \end{figure}
+    {\Large \textbf{GOVERNO DE SERGIPE}}\\[1pt]
+    {\large \textbf{\textit{SECRETARIA DE ESTADO DA SEGURANÇA PÚBLICA}}}\\[1pt]
+    {\large \textbf{\textit{SETOR DE ESTÁGIO}}}\\[0.25cm]
+\end{center}
+
+% === DADOS DO ESTAGIÁRIO ===
+\textbf{Nome: NOME}\\[1pt]
+\textbf{Local de Trabalho: LOCAL DE TRABALHO}\\[1pt]
+\textbf{Curso: CURSO}\\[1pt]
+\textbf{Instituição de Ensino: INSTITUIÇÃO}\\[1pt]
+\textbf{Telefone para Contato:} (00) 00000-0000\\[0.3cm]
+
+% === TÍTULO ===
+\begin{center}
+    {\large \textbf{FREQUÊNCIA ESTAGIÁRIO -- ABRIL 2026}}\\[0.2cm]
+\end{center}
+
+% === TABELA DE FREQUÊNCIA ===
+\renewcommand{\arraystretch}{1.05}
+\begin{center}
+\small
+\begin{tabular}{|>{\centering\arraybackslash}p{2.5cm}
+                |>{\centering\arraybackslash}p{2.5cm}
+                |>{\centering\arraybackslash}p{2.5cm}
+                |>{\centering\arraybackslash}p{6.5cm}|}
+\hline
+\textbf{DATA} &
+\makecell{\textbf{HORÁRIO} \\ \textbf{INÍCIO}} &
+\makecell{\textbf{HORÁRIO} \\ \textbf{TÉRMINO}} &
+\makecell{\textbf{ASSINATURA} \\ \textbf{ESTAGIÁRIO}} \\
+\hline
+01/04/2026 & --:-- & --:-- & \\ \hline
+02/04/2026 & --:-- & --:-- & \\ \hline
+03/04/2026 & XXXXXXXXX & XXXXXXXXX & FERIADO -- Sexta-feira Santa \\ \hline
+04/04/2026 & SÁBADO & SÁBADO & \semexpediente \\ \hline
+05/04/2026 & XXXXXXXXX & XXXXXXXXX & FERIADO -- Páscoa \\ \hline
+06/04/2026 & --:-- & --:-- & \\ \hline
+07/04/2026 & --:-- & --:-- & \\ \hline
+08/04/2026 & --:-- & --:-- & \\ \hline
+09/04/2026 & --:-- & --:-- & \\ \hline
+10/04/2026 & --:-- & --:-- & \\ \hline
+11/04/2026 & SÁBADO & SÁBADO & \semexpediente \\ \hline
+12/04/2026 & DOMINGO & DOMINGO & \semexpediente \\ \hline
+13/04/2026 & --:-- & --:-- & \\ \hline
+14/04/2026 & --:-- & --:-- & \\ \hline
+15/04/2026 & --:-- & --:-- & \\ \hline
+16/04/2026 & --:-- & --:-- & \\ \hline
+17/04/2026 & --:-- & --:-- & \\ \hline
+18/04/2026 & SÁBADO & SÁBADO & \semexpediente \\ \hline
+19/04/2026 & DOMINGO & DOMINGO & \semexpediente \\ \hline
+20/04/2026 & --:-- & --:-- & \\ \hline
+21/04/2026 & XXXXXXXXX & XXXXXXXXX & FERIADO -- Tiradentes \\ \hline
+22/04/2026 & --:-- & --:-- & \\ \hline
+23/04/2026 & --:-- & --:-- & \\ \hline
+24/04/2026 & --:-- & --:-- & \\ \hline
+25/04/2026 & SÁBADO & SÁBADO & \semexpediente \\ \hline
+26/04/2026 & DOMINGO & DOMINGO & \semexpediente \\ \hline
+27/04/2026 & --:-- & --:-- & \\ \hline
+28/04/2026 & --:-- & --:-- & \\ \hline
+29/04/2026 & --:-- & --:-- & \\ \hline
+30/04/2026 & --:-- & --:-- & \\ \hline
+\end{tabular}
+\end{center}
+
+% === RODAPÉ COM ASSINATURA ===
+\vfill
+\begin{center}
+    \textbf{}\\[1pt]
+    \rule{8cm}{0.4pt}\\[2pt]
+    Assinatura do Responsável Técnico
+\end{center}
+
+\end{document}
