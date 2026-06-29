@@ -28,11 +28,12 @@ Abra o arquivo `gerar_folha_latex.py` e edite o dicionário `DADOS` (localizado 
 DADOS = {
     "nome": "Seu Nome Completo",
     "local": "Secretaria de Estado da Segurança Pública",
-    "curso": "",
-    "instituicao": "",
+    "curso": "Seu Curso de Graduação",
+    "instituicao": "Sua Instituição de Ensino",
     "telefone": "(XX) XXXXX-XXXX",
-    "horario_inicio": "",     
-    "horario_termino": "",  
+    "horario_inicio": "XX-XX",  # horário padrão de entrada
+    "horario_termino": "XX-XX",  # horário padrão de saída
+    # Dados do responsável técnico
     "responsavel_nome": "Nome do Supervisor",
     "responsavel_instituicao": r"",
 }

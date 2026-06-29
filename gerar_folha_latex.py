@@ -33,18 +33,17 @@ from datetime import date, timedelta
 # DADOS DO ESTAGIÁRIO (edite aqui para personalizar)
 # =============================================================================
 DADOS = {
-    "nome": "NOME",
-    "local": "LOCAL DE TRABALHO",
-    "curso": "CURSO",
-    "instituicao": "INSTITUIÇÃO",
-    "telefone": "(00) 00000-0000",
-    "horario_inicio": "--:--",     # horário padrão de entrada
-    "horario_termino": "--:--",   # horário padrão de saída
+    "nome": "Seu Nome Completo",
+    "local": "Secretaria de Estado da Segurança Pública",
+    "curso": "Seu Curso de Graduação",
+    "instituicao": "Sua Instituição de Ensino",
+    "telefone": "(XX) XXXXX-XXXX",
+    "horario_inicio": "XX-XX",  # horário padrão de entrada
+    "horario_termino": "XX-XX",  # horário padrão de saída
     # Dados do responsável técnico
-    "responsavel_nome": "",
+    "responsavel_nome": "Nome do Supervisor",
     "responsavel_instituicao": r"",
 }
-
 
 # =============================================================================
 # CÁLCULO DA PÁSCOA - Algoritmo de Butcher (Gauss)
@@ -248,8 +247,8 @@ def gerar_linha_tabela(dia_info: dict, ano: int, mes: int) -> str:
       - Dia útil (seg/qua/sex): data & 8:00 & 12:00 & (em branco)
       - Dia útil (ter/qui):     data & DECLARAÇÃO & DECLARAÇÃO & DECLARAÇÃO
       - Sábado/Domingo:         data & SÁBADO/DOMINGO & mesmo & XXXXX (cinza)
-      - Feriado:                data & XXXXXXXXX & XXXXXXXXX & FERIADO (nome)
-      - Facultativo:            data & --- & --- & Ponto Facultativo
+      - Feriado:                data & XXXXXXXXX & XXXXXXXXX & FERIADO
+      - Facultativo:            data & XXXXXXXXX & XXXXXXXXX & Ponto Facultativo
     
     f-string: f"..." permite inserir variáveis Python direto no texto
     com {variavel}. É o jeito moderno de formatar strings em Python.
@@ -267,11 +266,11 @@ def gerar_linha_tabela(dia_info: dict, ano: int, mes: int) -> str:
     elif dia_info["tipo"] == "feriado":
         # Mostra o nome do feriado na coluna de assinatura
         nome = dia_info["descricao"]
-        linha = f"{data_str} & XXXXXXXXX & XXXXXXXXX & FERIADO -- {nome}"
+        linha = f"{data_str} & XXXXXXXXX & XXXXXXXXX & FERIADO"
     
     elif dia_info["tipo"] == "facultativo":
         descricao = dia_info["descricao"]
-        linha = f"{data_str} & --- & --- & \\textit{{{descricao}}}"
+        linha = f"{data_str} & XXXXXXXXX & XXXXXXXXX & {{descricao}}"
     
     else:  # dia útil
         # .weekday() → 0=seg, 1=ter, 2=qua, 3=qui, 4=sex
