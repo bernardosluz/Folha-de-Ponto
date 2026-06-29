@@ -8,11 +8,12 @@ Automação em Python projetada para gerar e compilar folhas de frequência de e
 
 Este projeto não requer a instalação de pacotes externos do Python via `pip`, pois utiliza apenas bibliotecas nativas. No entanto, ele depende de um compilador LaTeX no sistema operacional.
 
-1. **Python 3.x**: Para executar a lógica de automação e cálculo de datas.
+1. **Python 3.x**: Para executar a lógica de automação e cálculo de datas
+   * **Windowns:** Necessário instalar o [Python](https://www.python.org/downloads/).
 2. **Distribuição LaTeX**: Necessária para interpretar o arquivo `.tex` e gerar o `.pdf`.
    * **Windows:** Recomendado instalar o [MiKTeX](https://miktex.org/download).
    * **Linux:** `sudo apt install texlive-latex-base texlive-fonts-recommended texlive-lang-portuguese`
-   * *Nota: Certifique-se de que o comando `pdflatex` está adicionado ao `PATH` das Variáveis de Ambiente do seu sistema após a instalação.*
+*Nota: Certifique-se de que o comando `pdflatex` e `python` estão adicionados ao `PATH` das Variáveis de Ambiente do seu sistema após as instalações.*
 
 ---
 
