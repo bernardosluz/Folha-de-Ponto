@@ -265,12 +265,12 @@ def gerar_linha_tabela(dia_info: dict, ano: int, mes: int) -> str:
     
     elif dia_info["tipo"] == "feriado":
         # Mostra o nome do feriado na coluna de assinatura
-        nome = dia_info["descricao"]
+        # nome = dia_info["descricao"] -> não usado, pois queremos "FERIADO" genérico
         linha = f"{data_str} & XXXXXXXXX & XXXXXXXXX & FERIADO"
     
     elif dia_info["tipo"] == "facultativo":
-        descricao = dia_info["descricao"]
-        linha = f"{data_str} & XXXXXXXXX & XXXXXXXXX & {{descricao}}"
+        # descricao = dia_info["descricao"] -> não usado, pois queremos "Ponto Facultativo" genérico
+        linha = f"{data_str} & XXXXXXXXX & XXXXXXXXX & Ponto Facultativo"
     
     else:  # dia útil
         # .weekday() → 0=seg, 1=ter, 2=qua, 3=qui, 4=sex
